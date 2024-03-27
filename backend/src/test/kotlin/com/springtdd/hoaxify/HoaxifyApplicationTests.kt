@@ -11,10 +11,4 @@ class HoaxifyApplicationTests {
 	fun contextLoads() {
 	}
 
-	@Test
-	fun testEquals() {
-		var a = 10
-		assertEquals(10, a)
-	}
-
 }
