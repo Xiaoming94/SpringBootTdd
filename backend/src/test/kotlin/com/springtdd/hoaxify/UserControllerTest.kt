@@ -19,7 +19,6 @@ import com.springtdd.hoaxify.user.UserRepository;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-@TestMethodOrder(MethodOrderer.MethodName::class)
 public class UserControllerTest {
     
     private val API_1_0_USER_PATH: String = "/api/1.0/users"
