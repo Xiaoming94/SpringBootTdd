@@ -17,11 +17,13 @@ import com.springtdd.hoaxify.user.User;
 @ActiveProfiles("test")
 public class UserControllerTest {
     
-    private val API_PATH: String = "/api/1.0/users"
+    private val API_1_0_USER_PATH: String = "/api/1.0/users"
     @Autowired
     val testRestTemplate = TestRestTemplate()
 
     /**
+     * INTEGRATION TEST
+     * 
      * Given: A Valid user
      * When : Posting the user
      * Then : Receive Ok from server 
@@ -29,7 +31,7 @@ public class UserControllerTest {
     @Test
     public fun postUser_whenUserIsValid_receiveOk() {
         val user = createValidUser() 
-        val response = testRestTemplate.postForEntity(API_PATH, user, Object::class.java)
+        val response = testRestTemplate.postForEntity(API_1_0_USER_PATH, user, Object::class.java)
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK)
     }
 
